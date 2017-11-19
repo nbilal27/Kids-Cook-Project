@@ -1,5 +1,26 @@
 # Kids-Cook-Project
 
-### Contributors
+Parents often struggle to get their children to eat fresh fruits and vegetables. Kids Cook is an interactive web app that parents can use to discover & track healthy, tasty and fun food options that their children will be more willing to try.
 
-Alicia, Lauren and Nasr!!!!!!!!
+Users will answer a brief questionnaire about their child's current diet, allergies, likes and dislikes. Then the app will deliver balanced recipes in the scope of their child's likes and a visualization of the USDA food plate. The food plate visual will include a note about which particular part of the plate may need focus in order to ensure a solid foundation for healthy nutrition.
+
+
+## Authors
+
+* [Lauren Spencer](https://github.com/lspencer3)
+* [Nasr Bilal](https://github.com/nbilal27)
+* [Alicia Barrett](https://github.com/aliciawyse)
+
+## Built with
+
+* HTML5/CSS3
+* JavaScript ES5
+* jQuery v3.2.1
+* [Node.js](https://nodejs.org/en/)
+* [Express](https://expressjs.com/)
+* [Heroku](https://www.heroku.com/)
+* [MySQL](https://www.mysql.com/)
+
+## Installing
+
+Coming soon!
