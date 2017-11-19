@@ -8,8 +8,11 @@ Users will answer a brief questionnaire about their child's current diet, allerg
 ## Authors
 
 * [Lauren Spencer](https://github.com/lspencer3)
+Contributions: MySQL database management
 * [Nasr Bilal](https://github.com/nbilal27)
+Contributions:
 * [Alicia Barrett](https://github.com/aliciawyse)
+Contributions:
 
 ## Built with
 
