@@ -10,19 +10,21 @@ Users will answer a brief questionnaire about their child's current diet, allerg
 * [Lauren Spencer](https://github.com/lspencer3)
 Contributions: MySQL database management
 * [Nasr Bilal](https://github.com/nbilal27)
-Contributions:
+Contributions: JavaScript, jQuery for quiz
 * [Alicia Barrett](https://github.com/aliciawyse)
-Contributions:
+Contributions: User authentication, CSS
 
 ## Built with
 
-* HTML5/CSS3
+* HTML5
 * JavaScript ES5
 * jQuery v3.2.1
+* CSS framework [Bulma](https://bulma.io/)
 * [Node.js](https://nodejs.org/en/)
 * [Express](https://expressjs.com/)
 * [Heroku](https://www.heroku.com/)
 * [MySQL](https://www.mysql.com/)
+
 
 ## Installing
 
