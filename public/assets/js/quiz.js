@@ -4,8 +4,8 @@
 
 var displayQuestion = 0;
 
+//use an object to grade how well user does in each category. Highest score for each category is 5.
 var categories = {
-
     "vegetables": 0,
     "fruits": 0,
     "whole grains": 0,
@@ -13,6 +13,7 @@ var categories = {
     "water": 0
 };
 
+//Use this variable to grade how well user scored overall
 var totalPoints = 0;
 
 var myListofQuestions = [
@@ -86,7 +87,7 @@ function showQuestion() {
 
 var results = [];
 var counter = 0;
-var cleanResults = {};
+var quizResults = {};
 
 
 function processQuestion(idx) {
@@ -108,7 +109,7 @@ function processQuestion(idx) {
             question: myListofQuestions[displayQuestion].question
         });
 
-        cleanResults[myListofQuestions[displayQuestion].question] = myListofQuestions[displayQuestion].choices[idx];
+        quizResults[myListofQuestions[displayQuestion].question] = myListofQuestions[displayQuestion].choices[idx];
 
         counter++;
         displayQuestion++;
@@ -118,8 +119,9 @@ function processQuestion(idx) {
 
         $("#quizWrapper").toggleClass("hidden");
         $("#resultsWrapper").toggleClass("hidden");
-        console.log("Results", results);
-        console.log("Clean Results", cleanResults);
-        console.log("Categories", categories);
+        console.log("Results object", results);
+        //console.log("Quiz Results with corresponding answers", quizResults);
+        console.log("Score per category", categories);
+        console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
     }
 }
