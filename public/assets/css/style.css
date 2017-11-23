@@ -1,0 +1,27 @@
+html {
+    background-color: #0c9;
+}
+
+.brandName {
+    font-family: 'Short Stack', cursive;
+    margin-bottom:2%;
+}
+
+.tile.is-parent {
+    padding: 0rem;
+}
+
+
+.button {
+    border-radius: 40px;
+}
+
+/*sticky footer*/
+
+.section {
+    min-height: calc(95vh - 80px);
+}
+
+.footer {
+    height: 30px;
+}

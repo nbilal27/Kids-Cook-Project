@@ -12,7 +12,7 @@ Contributions: MySQL database management
 * [Nasr Bilal](https://github.com/nbilal27)
 Contributions: JavaScript, jQuery for quiz
 * [Alicia Barrett](https://github.com/aliciawyse)
-Contributions: User authentication, CSS
+Contributions: HTML5/CSS3
 
 ## Built with
 
