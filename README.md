@@ -1,5 +1,5 @@
-#Kids-Cook
+# Kids-Cook-Project
 
-###Contributors
+### Contributors
 
 Alicia, Lauren and Nasr!!!!!!!!
