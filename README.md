@@ -10,9 +10,10 @@ Users will answer a brief questionnaire about their child's current diet, allerg
 * [Lauren Spencer](https://github.com/lspencer3)
 Contributions: MySQL database management
 * [Nasr Bilal](https://github.com/nbilal27)
-Contributions: JavaScript, jQuery for quiz
+Contributions: JavaScript
 * [Alicia Barrett](https://github.com/aliciawyse)
-Contributions: HTML5/CSS3
+Contributions: HTML, CSS framework, JavaScript/jQuery
+
 
 ## Built with
 
@@ -28,4 +29,4 @@ Contributions: HTML5/CSS3
 
 ## Installing
 
-Coming soon!
+Instructions coming soon!

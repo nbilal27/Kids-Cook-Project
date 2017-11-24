@@ -16,6 +16,11 @@ html {
     border-radius: 40px;
 }
 
+img {
+    float: right;
+    overflow: hidden;
+}
+
 /*sticky footer*/
 
 .section {
