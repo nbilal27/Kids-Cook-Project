@@ -75,7 +75,7 @@ img {
 
 /*sticky footer*/
 .section {
-    min-height: calc(95vh - 80px);
+    min-height: calc(95vh - 20px);
 }
 
 .footer {
