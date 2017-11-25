@@ -2,9 +2,8 @@ html {
     background-color: #0c9;
 }
 
-.brandName {
+.logo {
     font-family: 'Short Stack', cursive;
-    margin-bottom:2%;
 }
 
 .tile.is-parent {
