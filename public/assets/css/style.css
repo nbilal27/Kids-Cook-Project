@@ -6,10 +6,15 @@ html {
     font-family: 'Short Stack', cursive;
 }
 
+#subtitle {
+    margin-top: .5%;
+}
+
 .tile.is-parent {
     padding: 0rem;
     padding-right: 2%;
 }
+
 
 
 .button {

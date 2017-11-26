@@ -71,7 +71,7 @@ function showQuestion() {
     myQuestion = myQuestion + "<p class='bold center_q'>" + myListofQuestions[displayQuestion].question + "</p>";
 
     myListofQuestions[displayQuestion].choices.forEach(function(choice) {
-        myQuestion += "<input type='radio' id='" + choice + "' name='" + displayQuestion + "' value='" + choice + "' + class='selectable'><label for='" + choice + "' class='round-button'>" + choice + "</label>";
+        myQuestion += "<input type='radio' id='" + choice + "' name='" + displayQuestion + "' value='" + choice + "' + class='selectable'><label for='" + choice + "' class='option-input'>" + choice + "</label>";
     });
 
     $("#quiz").html(myQuestion);
