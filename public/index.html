@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-
+    <!-- navigation bar -->
     <nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
-
         <div class="navbar-item is-size-2 logo">
             Kids Cook
         </div>
@@ -26,30 +26,40 @@
         <a class="navbar-item is-size-5	">
             Success Stories
         </a>
-
     </nav>
 
-
-
+    <!-- main content -->
     <section class="section">
-
-        <!--<div class="container brandName">
-            <h1 class="title has-text-white is-uppercase is-size-1">Kids cook</h1>
-        </div>-->
 
         <div class="container">
             <div class="tile">
 
                 <div class="tile is-parent is-5">
                     <article class="tile is-child notification">
+
                         <p class="title is-capitalized has-text-weight-bold">Nutritious meals for your kid, reimagined.</p>
-                        <p class="subtitle">Gauge how nutritious your child's eating habits are. Then discover new, healthy and fun recipes!</p>
-                        <div class="content">
-                            <a class="button is-large is-danger" href="quiz.html">Start Free</a>
+
+                        <p class="subtitle">Gauge how nutritious your child's eating habits are. Then discover healthy and fun recipes!</p>
+
+                        <!-- email input -->
+                        <div class="field">
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input is-medium" type="email" placeholder="Email" id="email">
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                            </div>
                         </div>
+
+                        <!-- start button -->
+                        <div class="content">
+                            <button class="button is-large is-danger" href="quiz.html" id="button">Start Free</button>
+                        </div>
+
                     </article>
                 </div>
 
+                <!-- image slider -->
                 <div class="tile is-parent slider">
                     <figure class="image slide1">
                         <img src="https://cdn.stocksnap.io/img-thumbs/960w/WNXY53NHX0.jpg">
@@ -66,10 +76,10 @@
 
             </div>
         </div>
-
-
     </section>
 
+
+    <!-- footer -->
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
@@ -77,6 +87,24 @@
             </div>
         </div>
     </footer>
+
+<script>
+
+    $(document).ready(function(){
+
+        $("button").click(function(){
+
+            var userEmail = $("#email").val().trim();
+
+            //set total score to local storage
+            window.localStorage.setItem("userEmail", userEmail);
+
+            //go to quiz page
+            window.location = "quiz.html";
+        });
+    });
+
+</script>
 
 </body>
 </html>

@@ -123,5 +123,11 @@ function processQuestion(idx) {
         //console.log("Quiz Results with corresponding answers", quizResults);
         console.log("Score per category", categories);
         console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
+
+        var userEmail = window.localStorage.getItem("userEmail");
+
+        console.log("userEmail", userEmail);
+
+
     }
 }
