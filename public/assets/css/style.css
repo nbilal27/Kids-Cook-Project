@@ -1,0 +1,164 @@
+html {
+    background-color: #0c9;
+}
+
+.logo {
+    font-family: 'Short Stack', cursive;
+}
+
+#subtitle {
+    margin-top: .5%;
+}
+
+.tile.is-parent {
+    padding: 0rem;
+    /*padding-right: 2%;*/
+}
+
+.button {
+    border-radius: 40px;
+}
+
+img {
+    float: right;
+    overflow: hidden;
+}
+
+/*IMAGE SLIDER*/
+.slider {
+    position: relative;
+}
+
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.slide1 {
+    background-size: cover;
+    animation:fade 8s infinite;
+    -webkit-animation:fade 8s infinite;
+}
+
+.slide2 {
+    background-size: cover;
+    animation:fade2 8s infinite;
+    -webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    background-size: cover;
+    animation:fade3 8s infinite;
+    -webkit-animation:fade3 8s infinite;
+}
+@keyframes fade
+{
+    0%   {opacity:1}
+    33.333% { opacity: 0}
+    66.666% { opacity: 0}
+    100% { opacity: 1}
+}
+@keyframes fade2
+{
+    0%   {opacity:0}
+    33.333% { opacity: 1}
+    66.666% { opacity: 0 }
+    100% { opacity: 0}
+}
+@keyframes fade3
+{
+    0%   {opacity:0}
+    33.333% { opacity: 0}
+    66.666% { opacity: 1}
+    100% { opacity: 0}
+}
+
+/*TIMELINE*/
+h2 {
+    text-align: center;
+    font-weight:bold;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.timelineContainer {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.timelineContainer::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.timelineContent {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+
+#timelineButton {
+    text-align: center;
+}
+
+
+
+
+/*STICKY FOOTER*/
+.section {
+    min-height: calc(95vh - 20px);
+}
+
+.footer {
+    height: 30px;
+}
+
+

@@ -1,0 +1,28 @@
+{
+  "name": "kids-cook-project",
+  "version": "1.0.0",
+  "description": "Parents often struggle to get their children to eat fresh fruits and vegetables. Kids Cook is an interactive web app that parents can use to discover & track healthy, tasty and fun food options that their children will be more willing to try.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbilal27/Kids-Cook-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbilal27/Kids-Cook-Project/issues"
+  },
+  "homepage": "https://github.com/nbilal27/Kids-Cook-Project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mocha": "^4.0.1",
+    "mysql": "^2.15.0"
+  }
+}

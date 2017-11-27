@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kids Cook Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
+        <div class="navbar-item is-size-2 logo">
+            Kids Cook
+        </div>
+
+        <a class="navbar-item is-size-5 ">
+            Resources
+        </a>
+
+        <a class="navbar-item is-size-5	">
+            Success Stories
+        </a>
+    </nav>
+
+    <!-- main content -->
+    <section class="section">
+        <div class="container">
+
+            <div class="tile">
+
+                <div class="tile is-parent is-5">
+                    <article class="tile is-child notification">
+
+                        <p class="title is-capitalized has-text-weight-bold">Nutritious meals for your kid, reimagined.</p>
+
+                        <p class="subtitle" id="subtitle">Gauge how nutritious your child's eating habits are. Then discover healthy and fun recipes!</p>
+
+                        <!-- email input -->
+                        <div class="field">
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input is-medium" type="email" placeholder="Email" id="email">
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- start button -->
+                        <div class="content">
+                            <button class="button is-large is-danger" href="quiz.html" id="button">Start Free</button>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- image slider -->
+                <div class="tile is-parent slider">
+                    <figure class="image slide1">
+                        <img src="https://cdn.stocksnap.io/img-thumbs/960w/WNXY53NHX0.jpg">
+                    </figure>
+
+                    <figure class="image slide2">
+                        <img src="https://cdn.stocksnap.io/img-thumbs/960w/79H5DWE31P.jpg">
+                    </figure>
+
+                    <figure class="image slide3">
+                        <img src="https://cdn.stocksnap.io/img-thumbs/960w/XI7CBAU8AV.jpg">
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- timeline -->
+    <section class="hero is-warning is-medium">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="is-size-3">How it works</h2>
+                <div class="timeline">
+
+                    <div class="timelineContainer left">
+                        <div class="timelineContent">
+                            <h3 class="is-size-4 has-text-weight-bold">Step one</h3>
+                            <p class="is-size-5">It's simple. Just enter your email address.</p>
+                        </div>
+                    </div>
+
+                    <div class="timelineContainer right">
+                        <div class="timelineContent">
+                            <h3 class="is-size-4 has-text-weight-bold">Step two</h3>
+                            <p class="is-size-5">Tell us what your kid usually eats and we'll get busy finding more balanced meals that both of you will enjoy.</p>
+                        </div>
+                    </div>
+
+                    <div class="timelineContainer left">
+                        <div class="timelineContent">
+                            <h3 class="is-size-4 has-text-weight-bold">Step three</h3>
+                            <p class="is-size-5">Check out fresh, simple homemade meals tailored to what your kid enjoys!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- second start button -->
+                <div class="content" id="timelineButton">
+                    <button class="button is-large is-danger" >Ready? Let's go!</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p><strong>Kids Cook</strong> by Alicia Barrett, Lauren Spencer and Nasr Bilal (2017).</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+
+    $(document).ready(function(){
+
+        $("button").click(function(){
+
+            var userEmail = $("#email").val().trim();
+
+            //set total score to local storage
+            window.localStorage.setItem("userEmail", userEmail);
+
+            //go to quiz page
+            window.location = "quiz.html";
+        });
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+html {
+    background-color: #0c9;
+}
+
+.hidden {
+    display: none;
+}
+
+#quiz {
+    background-color: hsl(0, 0%, 96%);
+    border-radius: 4px;
+}
+
+/*sticky footer*/
+.section {
+    min-height: calc(95vh - 80px);
+}
+
+.footer {
+    height: 30px;
+}
+
+
+
