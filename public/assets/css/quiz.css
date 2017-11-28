@@ -6,9 +6,14 @@ html {
     display: none;
 }
 
+
 #quiz {
     background-color: hsl(0, 0%, 96%);
     border-radius: 4px;
+}
+
+.selectable {
+    margin-right: 15px;
 }
 
 /*sticky footer*/
@@ -18,6 +23,14 @@ html {
 
 .footer {
     height: 30px;
+}
+
+.btn-prev {
+	float: left;
+}
+
+.btn-next {
+	float: right;
 }
 
 
