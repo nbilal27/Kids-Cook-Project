@@ -25,5 +25,13 @@ html {
     height: 30px;
 }
 
+.btn-prev {
+	float: left;
+}
+
+.btn-next {
+	float: right;
+}
+
 
 
