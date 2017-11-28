@@ -19,6 +19,42 @@ html {
     padding-top: 25px;
 }
 
+div.tile.is-ancestor {
+    overflow: hidden;
+    text-align: center;
+}
+
+.column {
+    text-align: center;
+}
+
+#testimonial {
+    margin-top: 5%;
+}
+
+div.columns {
+    margin-top: 5%;
+}
+
+p.title.is-2 {
+    font-family: 'Pompiere', cursive;
+    color: white;
+}
+p.subtitle.is-3 {
+    font-family: 'Pompiere', cursive;
+    color: white;
+}
+.column img {
+    float: left;
+    margin-right: -250px;
+    border-radius: 50%;
+
+}
+
+
+
+
+
 .content {
   padding: 25px 0;
 
