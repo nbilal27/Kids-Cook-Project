@@ -79,9 +79,8 @@ function showQuestion() {
     $(".selectable").on("click", function() {
 
         var index = $("input").index(this);
-
+    
         processQuestion(index);
-
     });
 }
 
@@ -127,7 +126,5 @@ function processQuestion(idx) {
         var userEmail = window.localStorage.getItem("userEmail");
 
         console.log("userEmail", userEmail);
-
-
     }
 }
