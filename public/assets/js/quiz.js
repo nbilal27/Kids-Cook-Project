@@ -102,7 +102,7 @@ function processQuestion(idx) {
 
         results.push({
             answers: myListofQuestions[displayQuestion].choices[idx],
-            question: myListofQuestions[displayQuestion].question
+            question: myListofQuestions[displayQuestion].questionn
         });
 
         quizResults[myListofQuestions[displayQuestion].question] = myListofQuestions[displayQuestion].choices[idx];
@@ -124,11 +124,7 @@ function processQuestion(idx) {
        console.log("new categories", categories);
 
         // Send the GET request.
-        $.ajax("/results" , {
-            type: "GET",
-            data: categories
-        }).then(
-            function() {
+        $.get("/results").then(function(results) {
                 console.log("great!");
             }
         );
