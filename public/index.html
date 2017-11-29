@@ -52,17 +52,21 @@
                         <!-- email input -->
                         <div class="field">
                             <div class="control has-icons-left has-icons-right">
-                                <input class="input is-medium" type="email" placeholder="Email" id="email">
-                                <span class="icon is-small is-left">
+                                <input class="input is-medium" type="email" name="email" placeholder="Email" id="email" required>
+
+                                    <span class="icon is-small is-left">
                                     <i class="fa fa-envelope"></i>
-                                </span>
+                                    </span>
+
+                                    <p class="help is-danger hidden" id="errorMsg">This email is invalid</p>
+                                    <!-- start button -->
+                                    <div class="content">
+                                        <button class="button is-large is-danger" type="submit" id="button">Start Free</button>
+                                    </div>
                             </div>
                         </div>
 
-                        <!-- start button -->
-                        <div class="content">
-                            <button class="button is-large is-danger" href="quiz.html" id="button">Start Free</button>
-                        </div>
+
                     </article>
                 </div>
 
@@ -174,11 +178,25 @@
 
             var userEmail = $("#email").val().trim();
 
-            //set total score to local storage
-            window.localStorage.setItem("userEmail", userEmail);
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-            //go to quiz page
-            window.location = "quiz.html";
+            var checkValid = regex.test(userEmail);
+
+            if (checkValid) {
+
+                //set total score to local storage
+                window.localStorage.setItem("userEmail", userEmail);
+
+                //go to quiz page
+                window.location = "quiz.html";
+            } else {
+                $("#errorMsg").toggleClass('hidden');
+            }
+
+
+
+
+
         });
     });
 

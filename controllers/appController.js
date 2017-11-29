@@ -20,20 +20,25 @@ router.get("/", function(req, res){
     res.render("index.html");
 });
 
+router.post("/api/email", function(req,res){
+
+	console.log("body", req.body);
+	res.render("quiz");
+
+
+});
+
+
 // request handler 
 router.get("/api/recipes", function(req, res) {
-    Recipes.findAll({}).then(function(results) {
+    Recipes.findAll({}).then(function(err, results) {
         // results are available to us inside the .then
         res.json(results);
     });
 });
 
 router.get("/results", function(req, res) {
-	var categories = req.body.categories
-    Recipes.findAll({}).then(function(results) {
-        // results are available to us inside the .then
-        res.json(results);
-    });
+    res.send("hello");
 });
 
 	
