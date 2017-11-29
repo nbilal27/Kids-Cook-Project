@@ -106,7 +106,7 @@ function processQuestion(idx) {
 
         results.push({
             answers: myListofQuestions[displayQuestion].choices[idx],
-            question: myListofQuestions[displayQuestion].question
+            question: myListofQuestions[displayQuestion].questionn
         });
 
         quizResults[myListofQuestions[displayQuestion].question] = myListofQuestions[displayQuestion].choices[idx];

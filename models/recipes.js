@@ -21,15 +21,6 @@ var Recipes = sequelize.define("recipes", {
   image: {
     type: Sequelize.TEXT
   },
-  serving_size: {
-    type: Sequelize.INTEGER
-  },
-  ingredients: {
-    type: Sequelize.TEXT
-  },
-  how_to_make: {
-    type: Sequelize.TEXT
-  },
   vegetable_score: {
     type: Sequelize.INTEGER,
     allowNull: false
@@ -57,6 +48,17 @@ var Recipes = sequelize.define("recipes", {
 }, {
   timestamps: false
 });
+
+
+/*serving_size: {
+    type: Sequelize.INTEGER
+  },
+  ingredients: {
+    type: Sequelize.TEXT
+  },
+  how_to_make: {
+    type: Sequelize.TEXT
+  },*/
 
 // Syncs with DB
 Recipes.sync();
