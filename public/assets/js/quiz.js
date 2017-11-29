@@ -19,44 +19,37 @@ var totalPoints = 0;
 var myListofQuestions = [
 
     {
-        question: "How often does your child eat vegetables?",
-        choices: ["1", "2", "3", "4", "5"],
-        addPoints: [1, 2, 3, 4, 5],
+        question: "Did your child eat vegetables today?",
+        choices: ["No", "Yes"],
+        addPoints: [1,0],
         category: "vegetables"
     },
 
     {
-        question: "Would you like to see your kid eat more fruits?",
-        choices: ["1", "2", "3", "4", "5"],
-        addPoints: [1, 2, 3, 4, 5],
+        question: "Has your kid eaten any fruits?",
+        choices: ["No", "Yes"],
+        addPoints: [1,0],
         category: "fruits"
     },
 
     {
-        question: "Does your kid eat plenty of whole grains",
-        choices: ["1", "2", "3", "4", "5"],
-        addPoints: [1, 2, 3, 4, 5],
+        question: "Did your family eat whole grains today?",
+        choices: ["No", "Yes"],
+        addPoints: [1,0],
         category: "whole grains"
     },
 
     {
-        question: "How often is meat/other healthy proteins included in each meal",
-        choices: ["1", "2", "3", "4", "5"],
-        addPoints: [1, 2, 3, 4, 5],
+        question: "Do feel like your child had enough healthy protein?",
+        choices: ["No", "Yes"],
+        addPoints: [1,0],
         category: "healthy protein"
     },
 
     {
-        question: "On a scale to one to five, does you child drink the required amount of water everyday?",
-        choices: ["1", "2", "3", "4", "5"],
-        addPoints: [1, 2, 3, 4, 5],
-        category: "water"
-    },
-
-    {
-        question: "Is your child allergic to any of these items?",
-        choices: ["peanuts", "wheat", "eggs", "dairy"],
-        addPoints: [0, 0, 0, 0],
+        question: "Did your kid have 8 glasses of water today?",
+        choices: ["No", "Yes"],
+        addPoints: [1,0],
         category: "water"
     }
     ];
@@ -78,7 +71,10 @@ function showQuestion() {
 
     $(".selectable").on("click", function() {
 
+       // var counter = 0;
         var index = $("input").index(this);
+
+        //counter =+ ;
 
         processQuestion(index);
 
@@ -119,9 +115,24 @@ function processQuestion(idx) {
 
         $("#quizWrapper").toggleClass("hidden");
         $("#resultsWrapper").toggleClass("hidden");
+
+
         console.log("Results object", results);
         //console.log("Quiz Results with corresponding answers", quizResults);
         console.log("Score per category", categories);
+
+       console.log("new categories", categories);
+
+        // Send the GET request.
+        $.ajax("/results" , {
+            type: "GET",
+            data: categories
+        }).then(
+            function() {
+                console.log("great!");
+            }
+        );
+
         console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
 
         var userEmail = window.localStorage.getItem("userEmail");

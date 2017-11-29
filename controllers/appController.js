@@ -20,6 +20,15 @@ router.get("/", function(req, res){
     res.render("index.html");
 });
 
+router.post("/api/email", function(req,res){
+
+	console.log("body", req.body);
+	res.render("quiz");
+
+
+});
+
+
 // request handler 
 router.get("/api/recipes", function(req, res) {
     Recipes.findAll({}).then(function(results) {
