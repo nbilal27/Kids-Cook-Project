@@ -12,7 +12,7 @@ var path = require("path");
 // This sets up the basic properties for our express server
 // ==============================================================================
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3050;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());

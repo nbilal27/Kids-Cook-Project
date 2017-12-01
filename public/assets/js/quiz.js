@@ -123,18 +123,29 @@ function processQuestion(idx) {
 
        console.log("new categories", categories);
 
-        // Send the GET request.
-        $.get("/results").then(function(results) {
-                console.log("great!");
-            }
-        );
+        // Send the POST request.
 
-        console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
+        // $.get("/results").then(function(results) {
+        //         console.log("great!");
+        //     }
+        // );
+
+        $.ajax({
+            method: "POST",
+            url: "/results",
+            data: categories
+        }).then(function(data) {
+            console.log(data);
+        }).done(console.log("hello"));
+    }
+
+
+       // console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
 
         var userEmail = window.localStorage.getItem("userEmail");
 
         console.log("userEmail", userEmail);
 
 
-    }
+
 }
