@@ -37,12 +37,18 @@ router.get("/api/recipes", function(req, res) {
     });
 });
 
-router.get("/results", function(req, res) {
+router.post("/results", function(req, res) {
     db.Recipes.findAll({}).then(function(results) {
         // results are available to us inside the .then
         res.json(results);
     });
 });
+
+
+
+
+
+
 
 	
 // Export routes for server.js to use.
