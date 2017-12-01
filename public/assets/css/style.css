@@ -54,7 +54,6 @@ p.subtitle.is-3 {
 }
 .column img {
     float: left;
-    margin-right: -250px;
     border-radius: 50%;
 
 }
