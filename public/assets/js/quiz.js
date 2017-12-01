@@ -124,10 +124,19 @@ function processQuestion(idx) {
        console.log("new categories", categories);
 
         // Send the GET request.
-        $.get("/results").then(function(results) {
+        /*$.get("/results").then(function(results) {
                 console.log("great!");
             }
-        );
+        );*/
+
+
+        $.ajax("/results", {
+          type: "GET",
+          data: categories
+        }).then(
+          function(result) {
+            console.log(result)
+        }).done(console.log("this is done"));
 
         console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
 
