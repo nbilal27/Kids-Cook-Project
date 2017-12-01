@@ -6,10 +6,10 @@ var displayQuestion = 0;
 
 //use an object to grade how well user does in each category. Highest score for each category is 5.
 var categories = {
-    "vegetables": 0,
-    "fruits": 0,
-    "whole grains": 0,
-    "healthy protein": 0,
+    "vegetable_score": 0,
+    "fruit_score": 0,
+    "wholegrain_score": 0,
+    "protein_score": 0,
     "water": 0
 };
 
@@ -22,28 +22,28 @@ var myListofQuestions = [
         question: "Did your child eat vegetables today?",
         choices: ["No", "Yes"],
         addPoints: [1,0],
-        category: "vegetables"
+        category: "vegetable_score"
     },
 
     {
         question: "Has your kid eaten any fruits?",
         choices: ["No", "Yes"],
         addPoints: [1,0],
-        category: "fruits"
+        category: "fruit_score"
     },
 
     {
         question: "Did your family eat whole grains today?",
         choices: ["No", "Yes"],
         addPoints: [1,0],
-        category: "whole grains"
+        category: "wholegrain_score"
     },
 
     {
         question: "Do feel like your child had enough healthy protein?",
         choices: ["No", "Yes"],
         addPoints: [1,0],
-        category: "healthy protein"
+        category: "protein_score"
     },
 
     {
@@ -124,10 +124,19 @@ function processQuestion(idx) {
        console.log("new categories", categories);
 
         // Send the GET request.
-        $.get("/results").then(function(results) {
+       /* $.get("/results").then(function(results) {
                 console.log("great!");
             }
-        );
+        );*/
+
+        $.ajax({
+            method: "POST",
+            url: "/results",
+            data: categories
+            }).done(
+            console.log("great")
+            )}
+
 
         console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
 
@@ -135,6 +144,4 @@ function processQuestion(idx) {
 
         console.log("userEmail", userEmail);
 
-
-    }
 }
