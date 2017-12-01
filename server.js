@@ -21,6 +21,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'public'));
+var db = require("./models");
 
 // Static directory to be served
 //app.use(express.static("app/public"));
@@ -40,6 +41,10 @@ app.use("/", routes);
 // LISTENER
 // The below code effectively "starts" our server
 // =============================================================================
-app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+
+
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });

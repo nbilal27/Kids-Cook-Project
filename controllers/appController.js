@@ -12,7 +12,7 @@ var router = express.Router();
 
 // Import the ORM to use its database functions.
 //var ? = require("../models/?");
-var Recipes = require("../models/recipes.js");
+var db = require("../models");
 
 
 // Create all our routes and set up logic within those routes where required.
@@ -31,14 +31,17 @@ router.post("/api/email", function(req,res){
 
 // request handler 
 router.get("/api/recipes", function(req, res) {
-    Recipes.findAll({}).then(function(err, results) {
+    db.Recipes.findAll({}).then(function(results) {
         // results are available to us inside the .then
         res.json(results);
     });
 });
 
 router.get("/results", function(req, res) {
-    res.send("hello");
+    db.Recipes.findAll({}).then(function(results) {
+        // results are available to us inside the .then
+        res.json(results);
+    });
 });
 
 	
