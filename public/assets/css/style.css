@@ -72,10 +72,10 @@ img {
     overflow: hidden;
 }
 
-.image img {
-    height: 100%;
-    object-fit: cover;
-}
+/*.image img {*/
+    /*height: 100%;*/
+    /*object-fit: cover;*/
+/*}*/
 
 /*IMAGE SLIDER*/
 .slider {
