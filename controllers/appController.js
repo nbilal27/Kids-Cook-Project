@@ -21,12 +21,35 @@ router.get("/", function(req, res){
     res.render("index.html");
 });
 
+/*router.get("/quiz", function(req, res){
+    res.render("quiz.html");
+});
+
+router.post("/add/email", function(req,res){
+
+	console.log("body", req.body);
+	res.end();*/
 router.post("/api/email", function(req,res){
 
 	console.log("body", req.body);
-	res.render("quiz");
+	res.end();
 });
 
+//request handler for user entry
+/*router.post("/add/users", function(req,res){
+	var newuser = req.body
+	var em = newuser.email
+	var pw = newuser.pw
+	db.Users.create({
+		email: em, 
+		password: pw 
+	}).then(function(results){
+		console.log(results.id)
+		console.log(req.session)
+		//req.session.Id = results.id
+		return res.redirect("quiz")
+	})
+})*/
 
 // request handler 
 router.get("/api/recipes", function(req, res) {

@@ -10,7 +10,13 @@ var categories = {
     "fruit_score": 0,
     "wholegrain_score": 0,
     "protein_score": 0,
-    "water": 0
+    "peanuts": 0,
+    "egg": 0,
+    "soy": 0,
+    "milk": 0,
+    "fish": 0,
+    "shellfish": 0,
+    "wheat_gluten": 0
 };
 
 //Use this variable to grade how well user scored overall
@@ -44,14 +50,14 @@ var myListofQuestions = [
         choices: ["No", "Yes"],
         addPoints: [1,0],
         category: "protein_score"
-    },
+    }/*,
 
     {
-        question: "Did your kid have 8 glasses of water today?",
-        choices: ["No", "Yes"],
-        addPoints: [1,0],
-        category: "water"
-    }
+        question: "Is Your child allergic to any of the following?",
+        choices: ["Peanuts", "egg", "soy", "milk", "fish", "shellfish", "wheat/gluten"],
+        addPoints: [1,1,1,1,1,1,1],
+        category: "allergies"
+    }*/
     ];
 
 showQuestion();
@@ -123,7 +129,6 @@ function processQuestion(idx) {
 
        console.log("new categories", categories);
 
-
         $.ajax("/results", {
           type: "POST",
           data: categories
@@ -145,15 +150,16 @@ function processQuestion(idx) {
             $("#fourth").html(result[3].recipe_name)
             $("#source4").html("<a href =" + result[3].source + ">" + result[3].source + "</a>")
             $("#pic4").html("<img src=" + result[3].image + ">")
-
         }).done(console.log("this is done"));
 
 
        // console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
 
         var userEmail = window.localStorage.getItem("userEmail");
+        var userpw = window.localStorage.getItem("userpw")
 
         console.log("userEmail", userEmail);
+        console.log("userpw", userpw);
     }
 
 }
