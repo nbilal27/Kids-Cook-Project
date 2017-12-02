@@ -6,7 +6,6 @@
 // sequelize (lowercase) references our connection to the DB.
 //var sequelize = require("../config/connection.js");
 
-// Creates a "Chirp" model that matches up with DB
 module.exports = function(sequelize, DataTypes) {
 
 var Recipes = sequelize.define("Recipes", {
@@ -39,6 +38,34 @@ var Recipes = sequelize.define("Recipes", {
     type: DataTypes.STRING,
     allowNull: false
   },
+  peanuts: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  egg: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  soy: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  milk: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  fish: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  shellfish: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  wheat_gluten: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
   viewed: {
     type: DataTypes.BOOLEAN,
     allowNull: false, 
@@ -46,6 +73,11 @@ var Recipes = sequelize.define("Recipes", {
   },
   source: {
     type: DataTypes.TEXT
+  },
+  saved: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false, 
+    defaultValue: 0
   }
 }, {
   timestamps: false

@@ -21,14 +21,31 @@ router.get("/", function(req, res){
     res.render("index.html");
 });
 
-router.post("/api/email", function(req,res){
-
-	console.log("body", req.body);
-	res.render("quiz");
-
-
+router.get("/quiz", function(req, res){
+    res.render("quiz.html");
 });
 
+router.post("/add/email", function(req,res){
+
+	console.log("body", req.body);
+	res.end();
+});
+
+//request handler for user entry
+/*router.post("/add/users", function(req,res){
+	var newuser = req.body
+	var em = newuser.email
+	var pw = newuser.pw
+	db.Users.create({
+		email: em, 
+		password: pw 
+	}).then(function(results){
+		console.log(results.id)
+		console.log(req.session)
+		//req.session.Id = results.id
+		return res.redirect("quiz")
+	})
+})*/
 
 // request handler 
 router.get("/api/recipes", function(req, res) {
@@ -38,13 +55,6 @@ router.get("/api/recipes", function(req, res) {
     });
 });
 
-/*router.post("/results", function(req, res) {
-    db.Recipes.findAll({}).then(function(results) {
-    	console.log(results)
-        // results are available to us inside the .then
-        res.json(results);
-    });
-});*/
 
  router.post("/results", function(req, res) {
      // Create an Author with the data available to us in req.body
@@ -71,6 +81,9 @@ router.get("/api/recipes", function(req, res) {
       res.json(results);
     });
   });
+
+
+
 	
 // Export routes for server.js to use.
 module.exports = router;

@@ -58,6 +58,8 @@
                                     <i class="fa fa-envelope"></i>
                                     </span>
 
+                                    <!-- start button <input class="input is-medium" type="password" placeholder="password" id="password" required> -->
+
                                     <p class="help is-danger hidden" id="errorMsg">This email is invalid</p>
                                     <!-- start button -->
                                     <div class="content">
@@ -169,38 +171,6 @@
             </div>
         </div>
     </footer>
-
-<script>
-
-    $(document).ready(function(){
-
-        $("button").click(function(){
-
-            var userEmail = $("#email").val().trim();
-
-            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-            var checkValid = regex.test(userEmail);
-
-            if (checkValid) {
-
-                //set total score to local storage
-                window.localStorage.setItem("userEmail", userEmail);
-
-                //go to quiz page
-                window.location = "quiz.html";
-            } else {
-                $("#errorMsg").toggleClass('hidden');
-            }
-
-
-
-
-
-        });
-    });
-
-</script>
-
+<script src="assets/js/home.js"></script>
 </body>
 </html>
