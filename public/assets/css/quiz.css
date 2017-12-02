@@ -16,6 +16,18 @@ html {
     margin-right: 15px;
 }
 
+.tile.is-child {
+    margin: 2%;
+}
+
+#sectionHeader {
+    text-align: center;
+}
+
+#benefits {
+    padding: 2%;
+}
+
 /*sticky footer*/
 .section {
     min-height: calc(95vh - 80px);
