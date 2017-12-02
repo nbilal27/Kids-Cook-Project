@@ -9,6 +9,39 @@
     <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/quiz.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <style>
+        .foodContainer {
+            position: relative;
+            width: 30%;
+            display: inline-block;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .foodContainer:hover .overlay {
+            height: 100%;
+        }
+
+    </style>
+
+
 </head>
 
 <body>
@@ -24,7 +57,7 @@
     </a>
 
     <a class="navbar-item is-size-5	">
-        Success Stories
+        About
     </a>
 </nav>
 
@@ -49,16 +82,17 @@
 
 
     <!-- Results/recipe recommendations -->
-    <div id="resultsWrapper" class="hidden container">
+    <div id="resultsWrapper" class="hidden">
+
         <section class="section">
-            <div class="tile is-ancestor is-6">
+            <div class="tile is-ancestor is-12">
+
+
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "first" class="title">Recipe:</p>
                         <p id = "source1" class="subtitle">With some content</p>
-                        <div id = "pic1" class="content">
-                            <p>TEST ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                        </div>
+                        <div id = "pic1" class="content"></div>
                     </article>
                 </div>
 
@@ -66,21 +100,16 @@
                     <article class="tile is-child box">
                         <p id = "second" class="title">Recipe:</p>
                         <p id = "source2" class="subtitle">With some content</p>
-                        <div id = "pic2" class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                        </div>
+                        <div id = "pic2" class="content"></div>
                     </article>
                 </div>
-            </div>
 
-            <div class="tile is-ancestor is-6">
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "third" class="title">Recipe:</p>
                         <p id = "source3" class="subtitle">With some content</p>
-                        <div id = "pic3" lass="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                        </div>
+                        <div id = "pic3" class="content"></div>
+
                     </article>
                 </div>
 
@@ -88,17 +117,85 @@
                     <article class="tile is-child box">
                         <p id = "fourth" class="title">Recipe:</p>
                         <p id = "source4" class="subtitle">With some content</p>
-                        <div id = "pic4" class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. </p>
-                        </div>
+                        <div id = "pic4" class="content"></div>
                     </article>
                 </div>
 
 
-
             </div>
 
+
+
+
         </section>
+
+        <section class="hero is-warning">
+            <div class="hero-body">
+                <div class="container">
+
+                    <div id="sectionHeader">
+
+                        <h2 class="is-size-3">Nutrients and Health Benefits</h2>
+
+                        <!-- isotope filters start -->
+                        <div class="filters text-center">
+                            <ul>
+                                <li class="active button is-primary is-large"><a href="#" data-filter="*">All</a></li>
+                                <li class="button is-link is-large"><a href="#" data-filter=".camp">Vegetables</a></li>
+                                <li class="button is-info is-large"><a href="#" data-filter=".race">Fruits</a></li>
+                                <li class="button is-danger is-large"><a href="#" data-filter=".wholeGrains">Whole Grains</a></li>
+                                <li class="button is-success is-large"><a href="#" data-filter=".healthyProtein">Healthy Protein</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- food group items start -->
+
+                    <div id="benefits" class="tile is-ancestor">
+
+                        <div class="tile is-4 is-parent">
+
+                            <div class="tile is-child box foodContainer">
+                                <p class="title">Nutrients</p>
+                                <p class="sub-title">Grains are important sources of many nutrients, including dietary fiber, several B vitamins (thiamin, riboflavin, niacin, and folate), and minerals (iron, magnesium, and selenium).</p>
+
+                                <div class="overlay">
+                                    <p class="title">Benefits</p>
+                                    <p class="sub-title">Consuming whole grains as part of a healthy diet may reduce the risk of heart disease. Consuming foods containing fiber, such as whole grains, as part of a healthy diet, may reduce constipation.</p>
+                                </div>
+                            </div>
+
+                            <div class="tile is-child box foodContainer">
+                                <p class="title">Nutrients</p>
+                                <p class="sub-title">Grains are important sources of many nutrients, including dietary fiber, several B vitamins (thiamin, riboflavin, niacin, and folate), and minerals (iron, magnesium, and selenium).</p>
+
+                                <div class="overlay">
+                                    <p class="title">Benefits</p>
+                                    <p class="sub-title">Consuming whole grains as part of a healthy diet may reduce the risk of heart disease. Consuming foods containing fiber, such as whole grains, as part of a healthy diet, may reduce constipation.</p>
+                                </div>
+                            </div>
+
+                            <div class="tile is-child box foodContainer">
+                                <p class="title">Nutrients</p>
+                                <p class="sub-title">Grains are important sources of many nutrients, including dietary fiber, several B vitamins (thiamin, riboflavin, niacin, and folate), and minerals (iron, magnesium, and selenium).</p>
+
+                                <div class="overlay">
+                                    <p class="title">Benefits</p>
+                                    <p class="sub-title">Consuming whole grains as part of a healthy diet may reduce the risk of heart disease. Consuming foods containing fiber, such as whole grains, as part of a healthy diet, may reduce constipation.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
 

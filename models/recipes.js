@@ -1,3 +1,4 @@
+
 // Dependencies
 // =============================================================
 
@@ -84,6 +85,3 @@ var Recipes = sequelize.define("Recipes", {
 });
   return Recipes;
 };
-
-
-
