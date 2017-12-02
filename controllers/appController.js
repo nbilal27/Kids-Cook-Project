@@ -25,8 +25,6 @@ router.post("/api/email", function(req,res){
 
 	console.log("body", req.body);
 	res.render("quiz");
-
-
 });
 
 
@@ -38,13 +36,7 @@ router.get("/api/recipes", function(req, res) {
     });
 });
 
-/*router.post("/results", function(req, res) {
-    db.Recipes.findAll({}).then(function(results) {
-    	console.log(results)
-        // results are available to us inside the .then
-        res.json(results);
-    });
-});*/
+
 
  router.post("/results", function(req, res) {
      // Create an Author with the data available to us in req.body
@@ -65,12 +57,12 @@ router.get("/api/recipes", function(req, res) {
     	where: {
     		[sequelize.Op.or]: params
     	}
-
     }).then(function(results) {
     	console.log(results)
       res.json(results);
     });
   });
+
 	
 // Export routes for server.js to use.
 module.exports = router;

@@ -149,7 +149,7 @@ function processQuestion(idx) {
         }).done(console.log("this is done"));
 
 
-        console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
+       // console.log("Total points (the user's grade for how well they feed their kid)", totalPoints);
 
         var userEmail = window.localStorage.getItem("userEmail");
 
