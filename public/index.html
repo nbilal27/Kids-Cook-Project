@@ -28,7 +28,7 @@
                 </a>
 
                 <a class="navbar-item is-size-5	">
-                    Success Stories
+                    About
                 </a>
 
             </div>
@@ -39,14 +39,12 @@
     </nav>
 
     <!-- main content -->
-    <section class="section is-medium">
-        <div class="container">
-            <div class="tile is-ancestor">
-
-                <div class="tile is-parent is-6">
+    <div class="container">
+        <section class="section is-medium">
+            <div class="tile is-ancestor" id="hero">
+                <div class="tile is-parent is-6" id="hero2">
                     <article class="tile is-child notification">
                         <h1 class="title is-capitalized has-text-weight-bold">Nutritious meals for your kid, reimagined.</h1>
-
                         <p class="subtitle" id="subtitle">Gauge how nutritious your child's eating habits are. Then discover healthy and fun recipes!</p>
 
                         <!-- email input -->
@@ -65,24 +63,23 @@
                                     </div>
                             </div>
                         </div>
-
-
                     </article>
                 </div>
 
                 <!-- image slider -->
-                <div class="tile is-parent slider">
-                    <figure class=" is-child image slide1">
-                        <img src="https://cdn.stocksnap.io/img-thumbs/960w/WNXY53NHX0.jpg">
-                    </figure>
+                <div class="tile is-parent slider" id="sliders">
 
-                    <figure class="is-child image slide2">
-                        <img src="https://cdn.stocksnap.io/img-thumbs/960w/79H5DWE31P.jpg">
-                    </figure>
+                        <figure class=" is-child image slide1">
+                            <img src="https://cdn.stocksnap.io/img-thumbs/960w/WNXY53NHX0.jpg">
+                        </figure>
 
-                    <figure class="is-child image slide3">
-                        <img src="https://cdn.stocksnap.io/img-thumbs/960w/XI7CBAU8AV.jpg">
-                    </figure>
+                        <figure class="is-child image slide2">
+                            <img src="https://cdn.stocksnap.io/img-thumbs/960w/79H5DWE31P.jpg">
+                        </figure>
+
+                        <figure class="is-child image slide3">
+                            <img src="https://cdn.stocksnap.io/img-thumbs/960w/XI7CBAU8AV.jpg">
+                        </figure>
                 </div>
 
             </div>
@@ -105,9 +102,10 @@
 
 
             </div>
-        </div>
-
     </section>
+
+    </div>
+
 
 <!-- timeline -->
     <section class="hero is-warning is-medium">
@@ -180,10 +178,6 @@
             } else {
                 $("#errorMsg").toggleClass('hidden');
             }
-
-
-
-
 
         });
     });

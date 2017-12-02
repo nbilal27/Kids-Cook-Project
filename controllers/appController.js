@@ -24,8 +24,6 @@ router.post("/api/email", function(req,res){
 
 	console.log("body", req.body);
 	res.render("quiz");
-
-
 });
 
 

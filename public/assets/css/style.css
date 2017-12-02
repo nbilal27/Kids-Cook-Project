@@ -72,10 +72,10 @@ img {
     overflow: hidden;
 }
 
-.image img {
-    height: 100%;
-    object-fit: cover;
-}
+/*.image img {*/
+    /*height: 100%;*/
+    /*object-fit: cover;*/
+/*}*/
 
 /*IMAGE SLIDER*/
 .slider {
@@ -232,6 +232,25 @@ h2 {
     /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
+    }
+}
+
+/* screen width is this many pixels or less do this*/
+@media screen and (max-width: 1408px){
+
+    #sliders {
+        display: none;
+    }
+
+    #hero {
+        background: lightgreen url("https://cdn.stocksnap.io/img-thumbs/960w/79H5DWE31P.jpg");
+        padding: 3%;
+        background-size: cover;
+    }
+
+    #hero2 {
+        width: 100%;
+        opacity: .97;
     }
 }
 
