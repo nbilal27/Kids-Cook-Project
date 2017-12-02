@@ -5,7 +5,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-
+//var session = require('express-session')
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -35,7 +35,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ================================================================================
 var routes = require("./controllers/appController");
 app.use("/", routes);
+app.use("/quiz", routes);
 
+//use sessions for tracking logins
+/*app.use(session({
+  secret: 'work hard',
+  resave: true,
+  genid: function(req) {
+    return genuuid() // use UUIDs for session IDs
+  },
+  saveUninitialized: false
+}));*/
 
 // =============================================================================
 // LISTENER
