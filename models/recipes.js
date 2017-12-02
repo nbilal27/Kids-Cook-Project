@@ -24,19 +24,19 @@ var Recipes = sequelize.define("Recipes", {
     type: DataTypes.TEXT
   },
   vegetable_score: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   wholegrain_score: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   fruit_score: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   protein_score: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   viewed: {
