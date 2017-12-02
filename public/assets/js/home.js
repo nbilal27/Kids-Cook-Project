@@ -25,7 +25,7 @@ $(document).ready(function(){
                    // pw: upw
                 }
 
-                $.ajax("/add/email", {
+                $.ajax("/api/email", {
                     type: "POST",
                     data: user
                  }).then(function(result){

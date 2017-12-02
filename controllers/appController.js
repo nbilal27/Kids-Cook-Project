@@ -21,11 +21,15 @@ router.get("/", function(req, res){
     res.render("index.html");
 });
 
-router.get("/quiz", function(req, res){
+/*router.get("/quiz", function(req, res){
     res.render("quiz.html");
 });
 
 router.post("/add/email", function(req,res){
+
+	console.log("body", req.body);
+	res.end();*/
+router.post("/api/email", function(req,res){
 
 	console.log("body", req.body);
 	res.end();
@@ -56,6 +60,7 @@ router.get("/api/recipes", function(req, res) {
 });
 
 
+
  router.post("/results", function(req, res) {
      // Create an Author with the data available to us in req.body
      var data = req.body
@@ -75,14 +80,11 @@ router.get("/api/recipes", function(req, res) {
     	where: {
     		[sequelize.Op.or]: params
     	}
-
     }).then(function(results) {
     	console.log(results)
       res.json(results);
     });
   });
-
-
 
 	
 // Export routes for server.js to use.
