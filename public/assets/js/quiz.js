@@ -55,7 +55,7 @@ var myListofQuestions = [
 
     {
         question: "Is Your child allergic to any of the following?",
-        choices: ["Peanuts", "egg", "soy", "milk", "fish", "shellfish", "wheat_gluten"],
+        choices: ["peanuts", "egg", "soy", "milk", "fish", "shellfish", "wheat_gluten"],
         addPoints: [1,1,1,1,1,1,1],
         category: "allergies"
     }
