@@ -2,6 +2,9 @@
 // QUIZ PAGE
 // ==========================================
 
+//var serialize = require('form-serialize');
+
+
 var displayQuestion = 0;
 
 //use an object to grade how well user does in each category. Highest score for each category is 5.
@@ -125,7 +128,26 @@ function grabAnswer() {
     }}
 
 
-
+// $(document).ready(function(){
+//     // click on button submit
+//     $("#submit").on('click', function(){
+//         // send ajax
+//         $.ajax({
+//             url: '/results', // url where to submit the request
+//             type : "POST", // type of action POST || GET
+//             dataType : 'json', // data type
+//             data : $("#myForm").serialize(), // post data || get data
+//             success : function(result) {
+//                 // you can see the result from the console
+//                 // tab of the developer tools
+//                 console.log(result);
+//             },
+//             error: function(xhr, resp, text) {
+//                 console.log(xhr, resp, text);
+//             }
+//         })
+//     });
+// });
 
 
 
@@ -217,7 +239,7 @@ function grabAnswer() {
 //
 //         $.ajax("/results", {
 //           type: "POST",
-//           data: categories
+//           data: categories // replace with serialize
 //         }).then(
 //           function(result) {
 //             console.log(result);
