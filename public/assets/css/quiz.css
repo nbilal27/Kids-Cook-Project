@@ -17,7 +17,8 @@ html {
 }
 
 .tile.is-child {
-    margin: 2%;
+
+    margin: 1%!important;
 }
 
 #sectionHeader {

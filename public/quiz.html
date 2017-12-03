@@ -62,13 +62,22 @@
 </nav>
 
     <!-- Quiz questions -->
+
+
     <div id="quizWrapper" class="">
         <section class="section">
 
 
             <div class="columns is-mobile is-centered">
-                <div class="column is-half is-narrow is-size-4" id="quiz"></div>
+                <form action="">
+                    <div class="column is-half is-narrow is-size-4" id="quiz-area"></div>
+
+                    <input type="submit" onclick="grabAnswer()">
+
+                </form>
+
             </div>
+
             <div class="container">
                 <div class="columns is-mobile is-centered">
                     <div class="column is-half is-narrow is-size-4">
@@ -157,10 +166,13 @@
 
                     <div id="benefits" class="tile is-ancestor">
 
-                        <div class="tile is-4 is-parent">
+                        <div class="tile is-parent">
 
                             <div class="tile is-child box foodContainer">
-                                <p class="title">Nutrients</p>
+                                <figure class="image is-128x128">
+                                    <img src="https://fns-prod.azureedge.net/sites/default/files/images/dmp_dairy.png">
+                                </figure>
+                                    
                                 <p class="sub-title">Grains are important sources of many nutrients, including dietary fiber, several B vitamins (thiamin, riboflavin, niacin, and folate), and minerals (iron, magnesium, and selenium).</p>
 
                                 <div class="overlay">
