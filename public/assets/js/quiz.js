@@ -74,7 +74,7 @@ for (var i = 0; i < myListofQuestions.length; i++) {
 
         if(myListofQuestions[i].category === 'allergies'){
 
-            panel.append("<input class='selectable' id=allergy" + [j] + " type='checkbox' name='question-" + i +
+            panel.append("<input class='selectable' id=allergy" + [j] + " type='checkbox' name='" + myListofQuestions[i].category +
                 "' value='" + myListofQuestions[i].choices[j] + "''>" + myListofQuestions[i].choices[j]);
 
             //var index = $('input').attr('name');
@@ -83,8 +83,8 @@ for (var i = 0; i < myListofQuestions.length; i++) {
            // grabAnswer(i,j);
 
         } else {
-            panel.append("<input class='selectable' id=" + [j] + " type='radio' name='question-" + i +
-                "' value='" + myListofQuestions[i].choices[j] + "''>" + myListofQuestions[i].choices[j]);
+            panel.append("<input required class='selectable' id=" + [j] + " type='radio' name='" + myListofQuestions[i].category +
+                "' value='" + myListofQuestions[i].addPoints[j] + "''>" + myListofQuestions[i].choices[j]);
 
         }
     }
