@@ -63,25 +63,25 @@ router.get("/api/recipes", function(req, res) {
 
  router.post("/results", function(req, res) {
      // Create an Author with the data available to us in req.body
-     var data = req.body
+     var data = req.body;
      var params = [];
     console.log(data);
    for (var key in data){
-    	//console.log(key)
+   // 	console.log(data[key]);
     	if (data[key] === '1'){
     		var paramsObj = {};
     		 paramsObj[key] = data[key];
-    		console.log(paramsObj)
+    		//console.log(paramsObj)
     		params.push(paramsObj)
     	}
     }
-    console.log(params)
+    //console.log("the params", params);
     db.Recipes.findAll({
     	where: {
     		[sequelize.Op.or]: params
     	}
     }).then(function(results) {
-    	console.log(results)
+    	console.log(results);
       res.json(results);
     });
   });

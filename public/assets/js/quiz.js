@@ -2,9 +2,6 @@
 // QUIZ PAGE
 // ==========================================
 
-//var serialize = require('form-serialize');
-
-
 var displayQuestion = 0;
 
 //use an object to grade how well user does in each category. Highest score for each category is 5.
@@ -94,60 +91,50 @@ for (var i = 0; i < myListofQuestions.length; i++) {
 
 }
 
-$("button").on("click", function() {
-
-    // var counter = 0;
-    //  var index = $("input").index(this);
-    //
-    //  var test = $('input').attr('id');
-    //
-    //  console.log(test);
-
-    grabAnswer();
-
-
-    // processQuestion(index);
-
-});
+// $("button").on("click", function() {
+//
+//     // var counter = 0;
+//     //  var index = $("input").index(this);
+//     //
+//     //  var test = $('input').attr('id');
+//     //
+//     //  console.log(test);
+//
+//     grabAnswer();
+//
+//
+//     // processQuestion(index);
+//
+// });
 
 //User clicks submit on index.html then the following function runs
 function grabAnswer() {
 
-    var results = [];
-    var counter = 0;
-    var quizResults = {};
+            $.ajax({
+                url: '/results', // url where to submit the request
+                type : "POST", // type of action POST || GET
+                dataType : 'json', // data type
+                data : $("#myForm").serialize(), // post data || get data
+                success : function(result) {
+                    // you can see the result from the console
+                    // tab of the developer tools
+                    //console.log(result);
+                    //hide the quiz and show results
 
-    //var isItChecked = $("input[name =" + i + "]:checked").val();
+                    console.log("hi");
 
-    for (var i = 0; i < myListofQuestions.length; i ++) {
+                    $("#quizWrapper").toggleClass("hidden");
+                    $("#resultsWrapper").toggleClass("hidden");
 
-        var isItChecked = $("input[name = question-" + i+"]:checked").val();
+                },
+                error: function(xhr, resp, text) {
+                    console.log(xhr, resp, text);
+                }
+            })
+}
 
-        console.log(isItChecked);
-
-    }}
 
 
-// $(document).ready(function(){
-//     // click on button submit
-//     $("#submit").on('click', function(){
-//         // send ajax
-//         $.ajax({
-//             url: '/results', // url where to submit the request
-//             type : "POST", // type of action POST || GET
-//             dataType : 'json', // data type
-//             data : $("#myForm").serialize(), // post data || get data
-//             success : function(result) {
-//                 // you can see the result from the console
-//                 // tab of the developer tools
-//                 console.log(result);
-//             },
-//             error: function(xhr, resp, text) {
-//                 console.log(xhr, resp, text);
-//             }
-//         })
-//     });
-// });
 
 
 
