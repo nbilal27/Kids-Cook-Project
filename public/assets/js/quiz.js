@@ -55,7 +55,7 @@ var myListofQuestions = [
 
     {
         question: "Is Your child allergic to any of the following?",
-        choices: ["Peanuts", "egg", "soy", "milk", "fish", "shellfish", "wheat/gluten"],
+        choices: ["Peanuts", "egg", "soy", "milk", "fish", "shellfish", "wheat_gluten"],
         addPoints: [1,1,1,1,1,1,1],
         category: "allergies"
     }
@@ -74,8 +74,11 @@ for (var i = 0; i < myListofQuestions.length; i++) {
 
         if(myListofQuestions[i].category === 'allergies'){
 
-            panel.append("<input class='selectable' id=allergy" + [j] + " type='checkbox' name='" + myListofQuestions[i].category +
-                "' value='" + myListofQuestions[i].choices[j] + "''>" + myListofQuestions[i].choices[j]);
+            // panel.append("<input class='selectable' id=allergy" + [j] + " type='checkbox' name='" + myListofQuestions[i].category +
+            //     "' value='" + myListofQuestions[i].choices[j] + "''>" + myListofQuestions[i].choices[j]);
+
+            panel.append("<input class='selectable' id=allergy" + [j] + " type='checkbox' name='" + myListofQuestions[i].choices[j] +
+                "' value='" + myListofQuestions[i].addPoints[j] + "''>" + myListofQuestions[i].choices[j]);
 
             //var index = $('input').attr('name');
             //console.log(index);
@@ -91,21 +94,6 @@ for (var i = 0; i < myListofQuestions.length; i++) {
 
 }
 
-// $("button").on("click", function() {
-//
-//     // var counter = 0;
-//     //  var index = $("input").index(this);
-//     //
-//     //  var test = $('input').attr('id');
-//     //
-//     //  console.log(test);
-//
-//     grabAnswer();
-//
-//
-//     // processQuestion(index);
-//
-// });
 
 //User clicks submit on index.html then the following function runs
 function grabAnswer() {
@@ -115,18 +103,16 @@ function grabAnswer() {
                 type : "POST", // type of action POST || GET
                 dataType : 'json', // data type
                 data : $("#myForm").serialize(), // post data || get data
-                success : function(result) {
+                success : [function(result) {
                     // you can see the result from the console
                     // tab of the developer tools
                     //console.log(result);
                     //hide the quiz and show results
 
-                    console.log("hi");
-
                     $("#quizWrapper").toggleClass("hidden");
                     $("#resultsWrapper").toggleClass("hidden");
 
-                },
+                }],
                 error: function(xhr, resp, text) {
                     console.log(xhr, resp, text);
                 }
