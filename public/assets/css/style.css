@@ -218,6 +218,12 @@ h2.is-size-4 {
 
 a { color: inherit; }
 
+#usda {
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+}
+
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media all and (max-width: 600px) {
