@@ -81,8 +81,9 @@ router.get("/api/recipes", function(req, res) {
     		[sequelize.Op.or]: params
     	}
     }).then(function(results) {
-    	console.log(results);
+    	//console.log(results);
       res.json(results);
+      //res.send(results);
     });
   });
 

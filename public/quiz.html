@@ -28,7 +28,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: #008CBA;
+            background-color: hsl(171, 100%, 41%);
             overflow: hidden;
             width: 100%;
             height: 0;
@@ -38,6 +38,9 @@
         .foodContainer:hover .overlay {
             height: 100%;
         }
+
+
+
 
     </style>
 
@@ -67,7 +70,7 @@
     <div id="quizWrapper" class="">
         <section class="section">
 
-            <!--<div class="columns is-mobile is-centered">
+            <div class="columns is-mobile is-centered">
                 <div class="column is-half is-narrow is-size-4" id="quiz"></div>
             </div>
             <div class="container">
@@ -77,17 +80,19 @@
                         <button class="button btn-next">Next</button>
                     </div>
                 </div>
-            </div>-->
+            </div>
 
 
 
-            <div class="columns is-mobile is-centered">
+            <!--<div class="columns is-mobile is-centered">
                 <form id="myForm">
                     <div class="column is-half is-narrow is-size-4" id="quiz-area"></div>
 
                     <input type="submit" onclick="grabAnswer()">
                 </form>
-            </div>
+            </div>-->
+
+
         </section>
     </div>
 
@@ -149,92 +154,82 @@
                         <h2 class="is-size-3">Nutrients and Health Benefits</h2>
 
                         <!-- isotope filters start -->
-                        <div class="filters text-center">
-                            <ul>
-                                <li class="active button is-primary is-large"><a href="#" data-filter="*">All</a></li>
-                                <li class="button is-link is-large"><a href="#" data-filter=".camp">Vegetables</a></li>
-                                <li class="button is-info is-large"><a href="#" data-filter=".race">Fruits</a></li>
-                                <li class="button is-danger is-large"><a href="#" data-filter=".wholeGrains">Whole Grains</a></li>
-                                <li class="button is-success is-large"><a href="#" data-filter=".healthyProtein">Healthy Protein</a></li>
-                            </ul>
+                        <!--<div id="filters" class="button-group">
+                            <button class="button is-checked is-primary is-large" data-filter="*">show all</button>
+                            <button class="button is-link is-large" data-filter=".veg">vegetables</button>
+                            <button class="button is-info is-large" data-filter=".fruit">fruits</button>
+                            <button class="button is-danger is-large" data-filter=".grain">whole grains</button>
+                            <button class="button is-success is-large" data-filter=".protein">healthy protein</button>
                         </div>
 
 
-                    </div>
+                    </div>-->
 
 
 
                     <!-- food group items start -->
-
+<div class="grid">
                     <div id="benefits" class="tile is-ancestor">
                         <div class="tile is-parent">
 
-                            <article class="tile is-child box foodContainer">
-                                <p class="title is-4">Vegetable Benefits</p>
+                            <article class="element-item veg tile is-child box foodContainer is-primary" data-category="veg">
+                                <p class="title is-4 ">Vegetable Benefits</p>
                                     
                                 <p class="sub-title">Eating a diet rich in vegetables and fruits as part of an overall healthy diet may reduce risk for heart disease, including heart attack and stroke.</p>
+
+                                <div class="overlay">
+                                    <p class="title is-4">Nutrients</p>
+                                    <p class="sub-title">Vegetables are important sources of many nutrients, including potassium, dietary fiber, folate (folic acid), vitamin A, and vitamin C.</p>
+                                </div>
+
                             </article>
 
-                            <article class="tile is-child box foodContainer">
+
+                            <article class=" element-item grain tile is-child box foodContainer" data-category="grain">
                                 <p class="title is-4">Whole Grain Benefits</p>
 
                                 <p class="sub-title">Consuming whole grains as part of a healthy diet may reduce the risk of heart disease.</p>
+
+                                <div class="overlay">
+                                    <p class="title is-4 test">Nutrients</p>
+                                    <p class="sub-title">Grains are important sources of many nutrients, including dietary fiber, several B vitamins (thiamin, riboflavin, niacin, and folate), and minerals (iron, magnesium, and selenium).</p>
+                                </div>
+
                             </article>
 
                             <article class="tile is-child box foodContainer">
                                 <p class="title is-4">Fruit Benefits</p>
 
                                 <p class="sub-title">Eating a diet rich in vegetables and fruits as part of an overall healthy diet may reduce risk for heart disease, including heart attack and stroke.</p>
-                            </article>
 
-                            <article class="tile is-child box foodContainer">
-                                <p class="title is-4">Vegetable Nutrients</p>
+                                <div class="overlay">
+                                    <p class="title is-4">Nutrients</p>
+                                    <p class="sub-title">Fruits are sources of many essential nutrients that are underconsumed, including potassium, dietary fiber, vitamin C, and folate (folic acid)</p>
+                                </div>
 
-                                <p class="sub-title">Vegetables are important sources of many nutrients, including potassium, dietary fiber, folate (folic acid), vitamin A, and vitamin C.</p>
-                            </article>
-                        </div>
-                    </div>
-
-                    <div id="benefits" class="tile is-ancestor">
-                        <div class="tile is-parent">
-
-                            <article class="tile is-child box foodContainer">
-                                <p class="title is-4">Protein Nutrients</p>
-
-                                <p class="sub-title">Meat, poultry, fish, dry beans and peas, eggs, nuts, and seeds supply many nutrients. These include protein, B vitamins (niacin, thiamin, riboflavin, and B6), vitamin E, iron, zinc, and magnesium.</p>
-                            </article>
-
-
-                            <article class="tile is-child box foodContainer">
-                                <p class="title is-4">Whole Grain Nutrients</p>
-
-                                <p class="sub-title">Grains are important sources of many nutrients, including dietary fiber, several B vitamins (thiamin, riboflavin, niacin, and folate), and minerals (iron, magnesium, and selenium).</p>
-                            </article>
-
-                            <article class="tile is-child box foodContainer">
-                                <p class="title is-4">Fruit Nutrients</p>
-
-                                <p class="sub-title">Fruits are sources of many essential nutrients that are underconsumed, including potassium, dietary fiber, vitamin C, and folate (folic acid)</p>
                             </article>
 
                             <article class="tile is-child box foodContainer">
                                 <p class="title is-4">Protein Benefits</p>
 
                                 <p class="sub-title">Proteins function as building blocks for bones, muscles, cartilage, skin, and blood. They are also building blocks for enzymes, hormones, and vitamins.</p>
+
+                                <div class="overlay">
+                                    <p class="title is-4 ">Nutrients</p>
+                                    <p class="sub-title">Meat, poultry, fish, dry beans and peas, eggs, nuts, and seeds supply many nutrients. These include protein, B vitamins (niacin, thiamin, riboflavin, and B6), vitamin E, iron, zinc, and magnesium.</p>
+                                </div>
+
                             </article>
+
+
                         </div>
                     </div>
+</div>
 
                     </div>
                 </div>
         </section>
     </div>
-
-
-
-
-
-
 
 
     <footer class="footer">

@@ -29,6 +29,8 @@ html {
     padding: 2%;
 }
 
+
+
 /*sticky footer*/
 .section {
     min-height: calc(95vh - 80px);
