@@ -24,6 +24,7 @@ Contributions:
 * [Express](https://expressjs.com/)
 * [Heroku](https://www.heroku.com/)
 * [MySQL](https://www.mysql.com/)
+* [Sequelize](http://docs.sequelizejs.com/)
 
 ## Development Process
 
@@ -42,7 +43,13 @@ We decided to build a quiz. The quiz includes five questions: a question for eac
 
 ### 3. Challenges and Successes!
 
-Front-end: A major front end challenge was using a CSS framework that we're not used to called [BULMA](https://bulma.io/). A lot of the styling takes place in the html file. It was impossible to keep CSS separate from HTML. Also, once we got started it was hard to look back and consider [validation standards](https://validator.w3.org/). Despite these challenges, BULMA is a beautiful CSS framework. For the most part, responsiveness is built in. In cases where that was not the case media queries did the trick. Sending data properly to the back-end was challenging as well.
+Front-end: 
+
+* Once we got started it was hard to look back and consider [validation standards](https://validator.w3.org/).
+
+* A major front end challenge was using a CSS framework that we're not used to called [BULMA](https://bulma.io/). A lot of the styling takes place in the html file. It was impossible to keep CSS separate from HTML. Despite these challenges, BULMA is a beautiful CSS framework. For the most part, responsiveness is built in. In cases where that was not the case media queries did the trick. 
+
+* Sending data properly to the back-end was challenging as well.
 
 Back-end: A major back end challenge was using sequelize. 
 
