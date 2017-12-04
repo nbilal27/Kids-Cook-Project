@@ -25,6 +25,7 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "form-serialize": "^0.7.2",
     "jade": "^1.11.0",
     "mocha": "^4.0.1",
     "mysql2": "^1.5.1",

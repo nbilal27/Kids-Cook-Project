@@ -17,7 +17,8 @@ html {
 }
 
 .tile.is-child {
-    margin: 2%;
+
+    margin: 1%!important;
 }
 
 #sectionHeader {
@@ -27,6 +28,8 @@ html {
 #benefits {
     padding: 2%;
 }
+
+
 
 /*sticky footer*/
 .section {

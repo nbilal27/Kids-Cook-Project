@@ -5,6 +5,7 @@
 var displayQuestion = 0;
 
 //use an object to grade how well user does in each category. Highest score for each category is 5.
+
 var categories = {
     "vegetable_score": 0,
     "fruit_score": 0,
@@ -50,15 +51,91 @@ var myListofQuestions = [
         choices: ["No", "Yes"],
         addPoints: [1,0],
         category: "protein_score"
-    }/*,
+    },
 
     {
         question: "Is Your child allergic to any of the following?",
-        choices: ["Peanuts", "egg", "soy", "milk", "fish", "shellfish", "wheat/gluten"],
+        choices: ["peanuts", "egg", "soy", "milk", "fish", "shellfish", "wheat_gluten"],
         addPoints: [1,1,1,1,1,1,1],
         category: "allergies"
-    }*/
+    }
     ];
+
+
+//show  quiz questions
+
+// var panel = $("#quiz-area");
+//
+// for (var i = 0; i < myListofQuestions.length; i++) {
+//
+//     panel.append("<h2>" + myListofQuestions[i].question + "</h2>");
+//
+//     for (var j = 0; j < myListofQuestions[i].choices.length; j++) {
+//
+//         if(myListofQuestions[i].category === 'allergies'){
+//
+//             // panel.append("<input class='selectable' id=allergy" + [j] + " type='checkbox' name='" + myListofQuestions[i].category +
+//             //     "' value='" + myListofQuestions[i].choices[j] + "''>" + myListofQuestions[i].choices[j]);
+//
+//             panel.append("<input class='selectable' id=allergy" + [j] + " type='checkbox' name='" + myListofQuestions[i].choices[j] +
+//                 "' value='" + myListofQuestions[i].addPoints[j] + "''>" + myListofQuestions[i].choices[j]);
+//
+//             //var index = $('input').attr('name');
+//             //console.log(index);
+//
+//            // grabAnswer(i,j);
+//
+//         } else {
+//             panel.append("<input required class='selectable' id=" + [j] + " type='radio' name='" + myListofQuestions[i].category +
+//                 "' value='" + myListofQuestions[i].addPoints[j] + "''>" + myListofQuestions[i].choices[j]);
+//
+//         }
+//     }
+//
+// }
+//
+//
+// //User clicks submit on index.html then the following function runs
+// function grabAnswer() {
+//
+//     console.log("send this",$("#myForm").serialize());
+//
+//             $.ajax({
+//                 url: '/results', // url where to submit the request
+//                 type : "POST", // type of action POST || GET
+//                 data : $("#myForm").serialize()// post data || get data
+//             })
+//                 .then(function(results){
+//
+//                     alert("working");
+//
+//                 })
+//                 .fail(function(){
+//                     alert("catch");
+//                 });
+// }
+
+
+
+
+
+
+//////////////////DON'T TOUCH CODE BELOW/////////////////////////
+//
+myQuestion = "";
+
+myListofQuestions.forEach(function(obj,idx){
+
+    myQuestion = myQuestion + "<p class='bold'>" + obj.question + "</p>";
+
+    obj.choices.forEach(function(choice) {
+        myQuestion = myQuestion + "<input type='radio' name=" + idx + " value=" + choice + ">" + choice + "<br>";
+
+        console.log(myQuestion);
+
+    })
+
+});
 
 showQuestion();
 
@@ -131,24 +208,25 @@ function processQuestion(idx) {
 
         $.ajax("/results", {
           type: "POST",
-          data: categories
+          data: categories // replace with serialize
         }).then(
           function(result) {
-            console.log(result)
-            $("#first").html(result[0].recipe_name)
-            $("#source1").html("<a href =" + result[0].source + ">" + result[0].source + "</a>")
-            $("#pic1").html("<img src=" + result[0].image + ">")
+            console.log(result);
+            $("#first").html(result[0].recipe_name);
+            $("#source1").html("<a href =" + result[0].source + ">" + result[0].source + "</a>");
 
-            $("#second").html(result[1].recipe_name)
-            $("#source2").html("<a href =" + result[1].source + ">" + result[1].source + "</a>")
-            $("#pic2").html("<img src=" + result[1].image + ">")
+            $("#pic1").html("<img src=" + result[0].image + ">");
 
-            $("#third").html(result[2].recipe_name)
+            $("#second").html(result[1].recipe_name);
+            $("#source2").html("<a href =" + result[1].source + ">" + result[1].source + "</a>");
+            $("#pic2").html("<img src=" + result[1].image + ">");
+
+            $("#third").html(result[2].recipe_name);
             $("#source3").html("<a href =" + result[2].source + ">" + result[2].source + "</a>")
-            $("#pic3").html("<img src=" + result[2].image + ">")
+            $("#pic3").html("<img src=" + result[2].image + ">");
 
-            $("#fourth").html(result[3].recipe_name)
-            $("#source4").html("<a href =" + result[3].source + ">" + result[3].source + "</a>")
+            $("#fourth").html(result[3].recipe_name);
+            $("#source4").html("<a href =" + result[3].source + ">" + result[3].source + "</a>");
             $("#pic4").html("<img src=" + result[3].image + ">")
         }).done(console.log("this is done"));
 
