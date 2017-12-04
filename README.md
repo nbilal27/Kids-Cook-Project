@@ -46,6 +46,7 @@ Front-end: A major front end challenge was using a CSS framework that we're not 
 
 Back-end: A major back end challenge was using sequelize. 
 
+Consistently committing our code and understanding how to get up to date with master or how to start a merge request became easy with more practice. 
 
 ### 4. Future Additions
 
