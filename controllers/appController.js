@@ -60,6 +60,52 @@ router.get("/api/recipes", function(req, res) {
 });
 
 
+router.post("/search/results", function(req, res) {
+	var search = req.body.curUserSearch
+	console.log(search)
+	if (search === "vegetable"){
+		db.Recipes.findAll({
+    	where: { vegetable_score: 1 },
+    }).then(function(results) {
+        // results are available to us inside the .then
+        res.json(results);
+    });
+}
+
+else if (search === "whole grain"){
+	db.Recipes.findAll({
+    	where: { wholegrain_score: 1 },
+    }).then(function(results) {
+        // results are available to us inside the .then
+        res.json(results);
+    });
+}
+else if (search === "fruit"){
+	db.Recipes.findAll({
+    	where: { fruit_score: 1 },
+    }).then(function(results) {
+        // results are available to us inside the .then
+        res.json(results);
+    });
+}
+else if (search === "protein"){
+	db.Recipes.findAll({
+    	where: { protein_score: 1 },
+    }).then(function(results) {
+        // results are available to us inside the .then
+        res.json(results);
+    });
+}
+else{
+    db.Recipes.findAll({
+    	where: { recipe_name: { $like: '%'+ search + '%' } },
+    }).then(function(results) {
+        // results are available to us inside the .then
+        res.json(results);
+    });
+}
+});
+
 
  router.post("/results", function(req, res) {
      // Create an Author with the data available to us in req.body

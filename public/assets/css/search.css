@@ -1,0 +1,128 @@
+html {
+    background-color: #0c9;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+#quiz {
+    background-color: hsl(0, 0%, 96%);
+    border-radius: 4px;
+}
+
+.selectable {
+    margin-right: 15px;
+}
+
+/*sticky footer*/
+.section {
+    min-height: calc(95vh - 80px);
+}
+
+.footer {
+    height: 30px;
+}
+
+.btn-prev {
+	float: left;
+}
+
+.btn-next {
+	float: right;
+}
+
+
+
+.column {
+    text-align: center;
+}
+
+#testimonial {
+    margin-top: 5%;
+}
+
+div.columns {
+    margin-top: 5%;
+}
+
+p.title.is-2 {
+    font-family: 'Pompiere', cursive;
+    color: white;
+}
+p.subtitle.is-3 {
+    font-family: 'Pompiere', cursive;
+    color: white;
+}
+.column img {
+    float: left;
+    border-radius: 50%;
+
+}
+
+.content {
+  padding: 25px 0;
+
+}
+
+.button {
+    border-radius: 40px;
+}
+
+
+img {
+    float: right;
+    overflow: hidden;
+}
+/*IMAGE SLIDER*/
+.slider {
+    position: relative;
+}
+
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+    position: absolute;
+   /* width: 100%;
+    height: 100%;*/
+
+}
+
+.slide1 {
+    background-size: cover;
+    animation:fade 8s infinite;
+    -webkit-animation:fade 8s infinite;
+}
+
+.slide2 {
+    background-size: cover;
+    animation:fade2 8s infinite;
+    -webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    background-size: cover;
+    animation:fade3 8s infinite;
+    -webkit-animation:fade3 8s infinite;
+}
+
+@keyframes fade
+{
+    0%   {opacity:1}
+    33.333% { opacity: 0}
+    66.666% { opacity: 0}
+    100% { opacity: 1}
+}
+@keyframes fade2
+{
+    0%   {opacity:0}
+    33.333% { opacity: 1}
+    66.666% { opacity: 0 }
+    100% { opacity: 0}
+}
+@keyframes fade3
+{
+    0%   {opacity:0}
+    33.333% { opacity: 0}
+    66.666% { opacity: 1}
+    100% { opacity: 0}
+}

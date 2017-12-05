@@ -35,7 +35,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ================================================================================
 var routes = require("./controllers/appController");
 app.use("/", routes);
-app.use("/quiz", routes);
 
 //use sessions for tracking logins
 /*app.use(session({
