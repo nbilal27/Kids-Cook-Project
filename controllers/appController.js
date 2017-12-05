@@ -109,26 +109,38 @@ else{
 
  router.post("/results", function(req, res) {
      // Create an Author with the data available to us in req.body
-     var data = req.body
-     var params = [];
+     var data = req.body;
+     var params1 = [];
+     var params2 =[];
     console.log(data);
    for (var key in data){
-    	//console.log(key)
-    	if (data[key] === '1'){
-    		var paramsObj = {};
-    		 paramsObj[key] = data[key];
-    		console.log(paramsObj)
-    		params.push(paramsObj)
+   	console.log(data[key]);
+   		if (key === "peanuts"|| key === "milk"|| key === "egg"|| key === "shellfish"|| key === "wheat_gluten"|| key === "soy"){
+   			if (data[key] === '1'){
+   				var paramsObj1 = {};
+   				data[key] = 0
+   				data[key] = paramsObj1[key]
+   				params1.push(paramsObj1)
+   				console.log(param)
+   			}
+   		}
+    	else if (key != "peanuts"|| key != "milk"|| key != "egg"|| key != "shellfish"|| key != "wheat_gluten"|| key != "soy" && data[key] === '1'){
+    		var paramsObj2 = {};
+    		 paramsObj2[key] = data[key];
+    		//console.log(paramsObj)
+    		params2.push(paramsObj2)
     	}
     }
-    console.log(params)
+    //console.log("the params", params);
     db.Recipes.findAll({
     	where: {
-    		[sequelize.Op.or]: params
+    		[sequelize.Op.or]: params2,
+    		[sequelize.Op.and]: params1
     	}
     }).then(function(results) {
-    	console.log(results)
+    	//console.log(results);
       res.json(results);
+      //res.send(results);
     });
   });
 

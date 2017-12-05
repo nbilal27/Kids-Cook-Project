@@ -6,23 +6,38 @@
     <title>Kids Cook Homepage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pompiere|Short+Stack|Nunito" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/quiz.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </head>
 
 <body>
 
+
 <!-- navigation bar -->
 <nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
-    <div class="navbar-item is-size-2 logo">
-        Kids Cook
-    </div>
+    <div class="container">
 
-    <a class="navbar-item is-size-5 ">
-        Resources
-    </a>
+        <a class="navbar-brand is-size-2 logo navbar-start" href="index.html">
+            Kids Cook
+        </a>
+
+        <div class="navbar-end">
+
+            <a class="navbar-item is-size-5" href="resources.html">
+                Resources
+            </a>
+
+            <a class="navbar-item is-size-5	" href="about.html">
+                About
+            </a>
+
+        </div>
+
+
+    </div>
 
     <a class="navbar-item is-size-5	">
         Success Stories
@@ -34,13 +49,15 @@
 </nav>
 
     <!-- Quiz questions -->
+
+
     <div id="quizWrapper" class="">
         <section class="section">
 
-
-            <div class="columns is-mobile is-centered">
+           <!-- <div class="columns is-mobile is-centered">
                 <div class="column is-half is-narrow is-size-4" id="quiz"></div>
             </div>
+
             <div class="container">
                 <div class="columns is-mobile is-centered">
                     <div class="column is-half is-narrow is-size-4">
@@ -48,7 +65,33 @@
                         <button class="button btn-next">Next</button>
                     </div>
                 </div>
+            </div>-->
+
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3" id="pic"> </figure>
+                </div>
+
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content is-size-4 is-white" id="quiz"></div>
+                    </div>
+                   <!-- <div class="media-right">
+                        <button class="button is-medium is-warning is-centered">Next</button>
+                    </div>-->
+                </div>
             </div>
+
+
+            <!--<div class="columns is-mobile is-centered">
+                <form id="myForm">
+                    <div class="column is-half is-narrow is-size-4" id="quiz-area"></div>
+
+                    <input type="submit" onclick="grabAnswer()">
+                </form>
+            </div>-->
+
+
         </section>
     </div>
 
@@ -58,45 +101,52 @@
         <section id = "results" class="section">
             <!-- Results/recipe recommendations 
              <div  class="tile is-ancestor is-6">
+=======
+    Results/recipe recommendations 
+    <div id="resultsWrapper" class="hidden">
+
+        <section class="section">
+            <div class="tile is-ancestor is-12">
+
+
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "first" class="title">Recipe:</p>
-                        <p id = "source1" class="subtitle">With some content</p>
-                        <div id = "pic1" class="content">
-                            <p>TEST ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                        </div>
+
+                        <div id = "pic1" class="content"></div>
+
+                        <a id = "source1" href="" class="subtitle is-size-4" target="_blank">Get the recipe</a>
                     </article>
                 </div>
 
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "second" class="title">Recipe:</p>
-                        <p id = "source2" class="subtitle">With some content</p>
-                        <div id = "pic2" class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                        </div>
+
+                        <div id = "pic2" class="content"></div>
+
+                        <a id = "source2" href="" class="subtitle is-size-4" target="_blank">Get the recipe</a>
                     </article>
                 </div>
-            </div>
 
-            <div class="tile is-ancestor is-6">
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "third" class="title">Recipe:</p>
-                        <p id = "source3" class="subtitle">With some content</p>
-                        <div id = "pic3" lass="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.</p>
-                        </div>
+
+                        <div id = "pic3" class="content"></div>
+
+                        <a id = "source3" href="" class="subtitle is-size-4" target="_blank">Get the recipe</a>
+
                     </article>
                 </div>
 
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "fourth" class="title">Recipe:</p>
-                        <p id = "source4" class="subtitle">With some content</p>
-                        <div id = "pic4" class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. </p>
-                        </div>
+
+                        <div id = "pic4" class="content"></div>
+
+                        <a id = "source4" href="" class="subtitle is-size-4" target="_blank">Get the recipe</a>
                     </article>
                 </div>
 
@@ -104,18 +154,104 @@
             </div>  --> 
         </section> 
     </div>
+  <!--          </div>
 
 
 
 
+        </section>-->
+
+        <section class="hero is-warning">
+            <div class="hero-body">
+                <div class="container">
+
+                    <div id="sectionHeader">
+
+                        <h2 class="is-size-3">Nutrients and Health Benefits</h2>
+
+                        <!-- isotope filters start -->
+                        <!--<div id="filters" class="button-group">
+                            <button class="button is-checked is-primary is-large" data-filter="*">show all</button>
+                            <button class="button is-link is-large" data-filter=".veg">vegetables</button>
+                            <button class="button is-info is-large" data-filter=".fruit">fruits</button>
+                            <button class="button is-danger is-large" data-filter=".grain">whole grains</button>
+                            <button class="button is-success is-large" data-filter=".protein">healthy protein</button>
+                        </div>
 
 
+                    </div>-->
+
+
+
+                    <!-- food group items start -->
+<div class="grid">
+                    <div id="benefits" class="tile is-ancestor">
+                        <div class="tile is-parent">
+
+                            <article class="element-item veg tile is-child box foodContainer is-primary" data-category="veg">
+                                <p class="title is-4 ">Vegetable Benefits</p>
+                                    
+                                <p class="sub-title">Eating a diet rich in vegetables and fruits as part of an overall healthy diet may reduce risk for heart disease, including heart attack and stroke.</p>
+
+                                <div class="overlay">
+                                    <p class="title is-4">Nutrients</p>
+                                    <p class="sub-title">Vegetables are important sources of many nutrients, including potassium, dietary fiber, folate (folic acid), vitamin A, and vitamin C.</p>
+                                </div>
+
+                            </article>
+
+
+                            <article class=" element-item grain tile is-child box foodContainer" data-category="grain">
+                                <p class="title is-4">Whole Grain Benefits</p>
+
+                                <p class="sub-title">Consuming whole grains as part of a healthy diet may reduce the risk of heart disease.</p>
+
+                                <div class="overlay">
+                                    <p class="title is-4 test">Nutrients</p>
+                                    <p class="sub-title">Grains are important sources of many nutrients, including dietary fiber, several B vitamins (thiamin, riboflavin, niacin, and folate), and minerals (iron, magnesium, and selenium).</p>
+                                </div>
+
+                            </article>
+
+                            <article class="tile is-child box foodContainer">
+                                <p class="title is-4">Fruit Benefits</p>
+
+                                <p class="sub-title">Eating a diet rich in vegetables and fruits as part of an overall healthy diet may reduce risk for heart disease, including heart attack and stroke.</p>
+
+                                <div class="overlay">
+                                    <p class="title is-4">Nutrients</p>
+                                    <p class="sub-title">Fruits are sources of many essential nutrients that are underconsumed, including potassium, dietary fiber, vitamin C, and folate (folic acid)</p>
+                                </div>
+
+                            </article>
+
+                            <article class="tile is-child box foodContainer">
+                                <p class="title is-4">Protein Benefits</p>
+
+                                <p class="sub-title">Proteins function as building blocks for bones, muscles, cartilage, skin, and blood. They are also building blocks for enzymes, hormones, and vitamins.</p>
+
+                                <div class="overlay">
+                                    <p class="title is-4 ">Nutrients</p>
+                                    <p class="sub-title">Meat, poultry, fish, dry beans and peas, eggs, nuts, and seeds supply many nutrients. These include protein, B vitamins (niacin, thiamin, riboflavin, and B6), vitamin E, iron, zinc, and magnesium.</p>
+                                </div>
+
+                            </article>
+
+
+                        </div>
+                    </div>
+</div>
+
+                    </div>
+                </div>
+        </section>
+    </div>
 
 
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
-                <p><strong>Kids Cook</strong> by Alicia Barrett, Lauren Spencer and Nasr Bilal (2017).</p>
+                <p><strong>Kids Cook</strong> by Alicia Barrett and Lauren Spencer(2017).</p>
             </div>
         </div>
     </footer>

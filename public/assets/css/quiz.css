@@ -2,19 +2,77 @@ html {
     background-color: #0c9;
 }
 
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+a { color: inherit; }
+
+
 .hidden {
     display: none;
 }
 
 
 #quiz {
-    background-color: hsl(0, 0%, 96%);
+    background-color: white;
     border-radius: 4px;
 }
 
 .selectable {
     margin-right: 15px;
 }
+
+.tile.is-child {
+
+    margin: 1%!important;
+}
+
+#sectionHeader {
+    text-align: center;
+}
+
+#benefits {
+    padding: 2%;
+}
+
+.foodContainer {
+    position: relative;
+    width: 30%;
+    display: inline-block;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(171, 100%, 41%);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.foodContainer:hover .overlay {
+    height: 100%;
+}
+
+div.card {
+    margin-left: 30%;
+    max-width: 40%;
+}
+
+article.tile.is-child.box{
+    text-align: center;
+}
+
+
 
 /*sticky footer*/
 .section {

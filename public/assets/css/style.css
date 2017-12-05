@@ -2,8 +2,8 @@ html {
     background-color: #0c9;
 }
 
-.logo {
-    font-family: 'Short Stack', cursive;
+* {
+    font-family: 'Nunito', sans-serif;
 }
 
 .hidden {
@@ -201,6 +201,29 @@ h2 {
 #timelineButton {
     text-align: center;
 }
+
+/*About page*/
+.audience {
+    display: inline-block !important;
+    width: 33%;
+}
+
+h2.is-size-4 {
+    padding-bottom: 4%;
+}
+
+#aboutContent {
+    margin-left: 24%;
+}
+
+a { color: inherit; }
+
+#usda {
+    margin-top: 4%;
+    margin-bottom: 4%;
+
+}
+
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media all and (max-width: 600px) {
