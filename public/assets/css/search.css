@@ -6,6 +6,10 @@ html {
     display: none;
 }
 
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
 
 
 #quiz {
