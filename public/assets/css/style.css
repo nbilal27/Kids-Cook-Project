@@ -2,8 +2,8 @@ html {
     background-color: #0c9;
 }
 
-.logo {
-    font-family: 'Short Stack', cursive;
+* {
+    font-family: 'Nunito', sans-serif;
 }
 
 .hidden {

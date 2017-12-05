@@ -6,62 +6,38 @@
     <title>Kids Cook Homepage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pompiere|Short+Stack|Nunito" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/quiz.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-
-    <style>
-        .foodContainer {
-            position: relative;
-            width: 30%;
-            display: inline-block;
-        }
-
-        .image {
-            width: 100%;
-            height: auto;
-        }
-
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: hsl(171, 100%, 41%);
-            overflow: hidden;
-            width: 100%;
-            height: 0;
-            transition: .5s ease;
-        }
-
-        .foodContainer:hover .overlay {
-            height: 100%;
-        }
-
-
-
-
-    </style>
-
-
 </head>
 
 <body>
 
+
 <!-- navigation bar -->
 <nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
-    <div class="navbar-item is-size-2 logo">
-        Kids Cook
+    <div class="container">
+
+        <a class="navbar-brand is-size-2 logo navbar-start" href="index.html">
+            Kids Cook
+        </a>
+
+        <div class="navbar-end">
+
+            <a class="navbar-item is-size-5" href="resources.html">
+                Resources
+            </a>
+
+            <a class="navbar-item is-size-5	" href="about.html">
+                About
+            </a>
+
+        </div>
+
+
     </div>
 
-    <a class="navbar-item is-size-5 " href="resources.html">
-        Resources
-    </a>
-
-    <a class="navbar-item is-size-5	" href="about.html">
-        About
-    </a>
 </nav>
 
     <!-- Quiz questions -->
@@ -70,9 +46,10 @@
     <div id="quizWrapper" class="">
         <section class="section">
 
-            <div class="columns is-mobile is-centered">
+           <!-- <div class="columns is-mobile is-centered">
                 <div class="column is-half is-narrow is-size-4" id="quiz"></div>
             </div>
+
             <div class="container">
                 <div class="columns is-mobile is-centered">
                     <div class="column is-half is-narrow is-size-4">
@@ -80,8 +57,22 @@
                         <button class="button btn-next">Next</button>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-4by3" id="pic"> </figure>
+                </div>
+
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content is-size-4 is-white" id="quiz"></div>
+                    </div>
+                   <!-- <div class="media-right">
+                        <button class="button is-medium is-warning is-centered">Next</button>
+                    </div>-->
+                </div>
+            </div>
 
 
             <!--<div class="columns is-mobile is-centered">
@@ -107,24 +98,30 @@
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "first" class="title">Recipe:</p>
-                        <p id = "source1" class="subtitle">With some content</p>
+
                         <div id = "pic1" class="content"></div>
+
+                        <a id = "source1" href="" class="subtitle is-size-4" target="_blank">Get the recipe</a>
                     </article>
                 </div>
 
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "second" class="title">Recipe:</p>
-                        <p id = "source2" class="subtitle">With some content</p>
+
                         <div id = "pic2" class="content"></div>
+
+                        <a id = "source2" href="" class="subtitle is-size-4" target="_blank">Get the recipe</a>
                     </article>
                 </div>
 
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "third" class="title">Recipe:</p>
-                        <p id = "source3" class="subtitle">With some content</p>
+
                         <div id = "pic3" class="content"></div>
+
+                        <a id = "source3" href="" class="subtitle is-size-4" target="_blank">Get the recipe</a>
 
                     </article>
                 </div>
@@ -132,8 +129,10 @@
                 <div class="tile is-parent">
                     <article class="tile is-child box">
                         <p id = "fourth" class="title">Recipe:</p>
-                        <p id = "source4" class="subtitle">With some content</p>
+
                         <div id = "pic4" class="content"></div>
+
+                        <a id = "source4" href="" class="subtitle is-size-4" target="_blank">Get the recipe</a>
                     </article>
                 </div>
 
