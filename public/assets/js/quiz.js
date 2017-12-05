@@ -135,7 +135,82 @@ function processQuestion(idx) {
         }).then(
           function(result) {
             console.log(result)
-            $("#first").html(result[0].recipe_name)
+            for (var i = 0; i <result.length; i ++){
+        if (i%2 === 0) {
+            var main = $("<div>")
+            main.addClass("tile is-ancestor is-8")
+            main.attr("id", i)
+
+            var parent = $("<div>")
+            parent.addClass("tile is-parent")
+
+            var child = $("<article>")
+            child.addClass("tile is-child box")
+
+            var a = $("<a>")
+            a.attr("href", result[i].source)
+
+            var p = $("<p>")
+            p.addClass("title")
+            p.html(result[i].recipe_name)
+
+            var content = $("<div>")
+            content.addClass("content")
+
+            var img = $("<img>")
+            img.attr("src", result[i].image)
+
+            var p2 = $("<p>")
+            p2.html("Get Recipe")
+
+             content.append(img)
+            a.append(p2)
+            child.append(p)
+            child.append(content)
+            child.append(a)
+            parent.append(child)
+            main.append(parent)
+            $("#results").append(main)
+        }
+        else {
+            var parent = $("<div>")
+            parent.addClass("tile is-parent")
+
+            var child = $("<article>")
+            child.addClass("tile is-child box")
+
+            var a = $("<a>")
+            a.attr("href", result[i].source)
+
+            var p = $("<p>")
+            p.addClass("title")
+            p.html(result[i].recipe_name)
+
+            var content = $("<div>")
+            content.addClass("content")
+
+            var p2 = $("<p>")
+            p2.html("Get Recipe")
+
+            var img = $("<img>")
+            img.attr("src", result[i].image)
+
+            content.append(img)
+            a.append(p2)
+            child.append(p)
+            child.append(content)
+            child.append(a)
+            parent.append(child)
+            var id = i-1
+            $("#" + id).append(parent)
+        }
+
+        }
+
+
+
+
+            /*$("#first").html(result[0].recipe_name)
             $("#source1").html("<a href =" + result[0].source + ">" + result[0].source + "</a>")
             $("#pic1").html("<img src=" + result[0].image + ">")
 
@@ -149,7 +224,7 @@ function processQuestion(idx) {
 
             $("#fourth").html(result[3].recipe_name)
             $("#source4").html("<a href =" + result[3].source + ">" + result[3].source + "</a>")
-            $("#pic4").html("<img src=" + result[3].image + ">")
+            $("#pic4").html("<img src=" + result[3].image + ">")*/
         }).done(console.log("this is done"));
 
 
